@@ -1,0 +1,18 @@
+body {
+    background-image: url("stack-various-books-table.jpg");
+    background-size: cover;
+}
+#infoDiv {
+    background-color: white;
+}
+li {
+    list-style: none;
+}
+@media screen and (max-width: 768px) {
+    #exStat, #specInfo {
+        text-align: center;
+    }
+    #forButton {
+        margin: auto;
+    }
+}

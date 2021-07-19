@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js" integrity="sha256-WyjlLy3rvVSitHOXMctYkMCOU6GAletPg+qniNKLCQM=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="/ExamStatistics/css/main.css">
+<title>Exam statistics</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-light m-5">Exam statistics</h1>
+        <h3 class="text-light mt-5" id="exStat">Exam Statistic June</h3>
+        <p class="text-light" id="specInfo">Total students: %count%</p>
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="row bg-info">
+                    <div class="col-md-5">PASSED</div>
+                    <div class="col-md-2 offset-md-4" id="noOfPassed"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-3">
+                <div class="row bg-danger ">
+                    <div class="col-md-5">FAILED</div>
+                    <div class="col-sm-1 offset-md-4" id="noOfFailed"></div>
+                    <div class="col-sm-1" id="failedStatistics">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col-md-2 offset-md-1 p-3">
+                <select class="form-control">
+                    <option class="examOptions" value="JavaScripts">JavaScript</option>
+                    <option class="examOptions" value="Java">Java</option>
+                    <option class="examOptions" value="HTML">HTML</option>
+                    <option class="examOptions" value="CSS">CSS</option>
+                    <option class="examOptions" value="Phyton">Phyton</option>
+                    <option class="examOptions" value="PHP">PHP</option>
+                    <option class="examOptions" value="C++">C++</option>
+                    <option class="examOptions" value="C#">C#</option>
+                    <option class="examOptions" value="Ruby">Ruby</option>
+                </select>
+            </div>
+            <div class="col-md-4 ml-1 p-3">
+                <input id="name" class="form-control" type="text" placeholder="Name Surname">
+            </div>
+            <div class="col-md-2 ml-1 p-3">
+                <input id="grade" class="form-control" type="number" placeholder="Grade" min="1" max="10">
+            </div>
+            <div class="col-md-2 ml-1 p-2 text-center" id="forButton">
+                <button class="btn btn-lg text-info">ADD</button>
+            </div>
+        </div>
+        <p id="error"></p>
+    </div>
+    <div class="container pb-5" id="infoDiv">
+        <div class="row pt-5">
+            <div class="col-md-4 offset-md-1">
+                <h3 class="border-bottom border-secondary text-info">PASSED</h3>
+                <ul>
+                    <div class="row" id="forPassed">
+                    </div>
+                </ul>    
+            </div>
+            <div class="col-md-4 offset-md-1">
+                <h3 class="border-bottom border-secondary text-danger">FAILED</h3>
+                <ul>
+                    <div class="row" id="forFailed">
+                    </div>
+                </ul>    
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
